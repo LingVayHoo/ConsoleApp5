@@ -18,6 +18,8 @@ namespace ConsoleApp5
             //PrintTextArray(SplitText(text)); я бы сделал так
         }
 
+
+
         static string[] SplitText(string text)
         {
             string[] textArray = text.Split(' ');

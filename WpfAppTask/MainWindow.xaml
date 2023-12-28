@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfAppTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppTask"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="TextBoxOne"
+            HorizontalAlignment="Center" 
+                 Margin="0,25,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="TextBox" 
+                 VerticalAlignment="Top" 
+                 Width="352" 
+                 Height="48" 
+                 TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="FirstButton" 
+                Content="Разбить на массив" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Height="42" Width="166" 
+                Margin="122,90,0,0" 
+                Click="Button_Click" FontSize="14" FontFamily="Arial Black"/>
+        <ListBox x:Name="ListBoxOne" 
+                 d:ItemsSource="{d:SampleData ItemCount=5}" 
+                 Margin="125,156,115,26"/>
+        <TextBox x:Name="TextBoxTwo" 
+                 HorizontalAlignment="Center" 
+                 Margin="0,25,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="TextBox" 
+                 VerticalAlignment="Top" 
+                 Width="352" 
+                 Height="48" 
+                 Grid.Column="1" TextChanged="TextBox_TextChanged_1"/>
+        <Button x:Name="SecondButton" 
+                Content="Инверсия" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Top" 
+                Height="42" 
+                Width="166" 
+                Margin="0,90,0,0" 
+                Grid.Column="1" Click="Button_Click_1" FontFamily="Arial Black" FontSize="14"/>
+        <Label x:Name="LabelForTwo" 
+               Grid.Column="1" 
+               Content="Label" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center" 
+               Height="65" 
+               Width="316" FontSize="14"/>
+
+    </Grid>
+</Window>
